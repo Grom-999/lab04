@@ -1,4 +1,4 @@
-name: rebuilding
+name: CI
 on: [push]
 
 jobs:
