@@ -1,4 +1,4 @@
-name: rebuild
+name: CI
 
 on: [push]
 
@@ -14,24 +14,24 @@ jobs:
      - name: formatter_lib
        shell: bash
        run: |
-         cd formatter_lib/
-         cmake -H. -B_build
-         cmake --build _build
+        cd formatter_lib/
+        cmake -H. -B_build
+        cmake --build _build
 
      - name: formatter_ex_lib
        shell: bash
        run: |
-           cd formatter_ex_lib/
-           cmake -H. -B_build
-           cmake -—build _build
+         cd formatter_ex_lib/
+         cmake -H. -B_build
+         cmake -—build _build
 
      - name: hello_world_application
        shell: bash
        run: |
-            cd hello_world_application/
-            cmake CMakeLists.txt
-            make
-            ./hw
+        cd hello_world_application/
+        cmake CMakeLists.txt
+        make
+        ./hw
 
      - name: solver_app
        shell: bash
