@@ -16,14 +16,14 @@ jobs:
        run: |
          cd formatter_lib/
          cmake -H. -B_build
-         cmake -build _build
+         cmake --build _build
 
      - name: formatter_ex_lib
        shell: bash
        run: |
            cd formatter_ex_lib/
            cmake -H. -B_build
-           cmake —build _build
+           cmake -—build _build
 
      - name: hello_world_application
        shell: bash
